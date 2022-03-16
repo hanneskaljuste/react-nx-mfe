@@ -1,0 +1,28 @@
+{
+  "root": "apps/fleet-monitor-e2e",
+  "sourceRoot": "apps/fleet-monitor-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/fleet-monitor-e2e/cypress.json",
+        "devServerTarget": "fleet-monitor:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "fleet-monitor:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/fleet-monitor-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["fleet-monitor"]
+}

@@ -1,0 +1,74 @@
+{
+  "root": "apps/fleet-monitor",
+  "sourceRoot": "apps/fleet-monitor/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:webpack",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "compiler": "babel",
+        "outputPath": "dist/apps/fleet-monitor",
+        "index": "apps/fleet-monitor/src/index.html",
+        "baseHref": "/",
+        "main": "apps/fleet-monitor/src/main.tsx",
+        "polyfills": "apps/fleet-monitor/src/polyfills.ts",
+        "tsConfig": "apps/fleet-monitor/tsconfig.app.json",
+        "assets": [
+          "apps/fleet-monitor/src/favicon.ico",
+          "apps/fleet-monitor/src/assets"
+        ],
+        "styles": ["apps/fleet-monitor/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/fleet-monitor/src/environments/environment.ts",
+              "with": "apps/fleet-monitor/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "fleet-monitor:build",
+        "hmr": true,
+        "port": 4201
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "fleet-monitor:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/fleet-monitor/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/fleet-monitor"],
+      "options": {
+        "jestConfig": "apps/fleet-monitor/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

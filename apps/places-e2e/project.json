@@ -1,0 +1,28 @@
+{
+  "root": "apps/places-e2e",
+  "sourceRoot": "apps/places-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/places-e2e/cypress.json",
+        "devServerTarget": "places:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "places:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/places-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["places"]
+}

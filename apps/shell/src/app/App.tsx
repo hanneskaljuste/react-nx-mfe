@@ -4,10 +4,17 @@ import NxWelcome from './nx-welcome';
 
 import { Route, Link } from 'react-router-dom';
 import { CommonUi } from '@sixfold/common-ui';
+import React, { Suspense } from 'react';
+
+const PlacesRemoteEntry = React.lazy(() => import('places/PlacesRemoteEntry'));
 
 export function App() {
   return (
     <>
+      Shell App1
+      <Suspense fallback={<div>Loading...</div>}>
+        <PlacesRemoteEntry></PlacesRemoteEntry>
+      </Suspense>
       <CommonUi />
       <div role="navigation">
         <ul>

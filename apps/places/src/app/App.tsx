@@ -1,5 +1,5 @@
 import PlacesRemoteEntry from './components/PlacesRemoteEntry';
 export function App() {
-  return <PlacesRemoteEntry></PlacesRemoteEntry>;
+  return <PlacesRemoteEntry title=""></PlacesRemoteEntry>;
 }
 export default App;

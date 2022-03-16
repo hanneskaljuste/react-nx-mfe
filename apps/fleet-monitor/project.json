@@ -12,7 +12,7 @@
         "outputPath": "dist/apps/fleet-monitor",
         "index": "apps/fleet-monitor/src/index.html",
         "baseHref": "/",
-        "main": "apps/fleet-monitor/src/main.tsx",
+        "main": "apps/fleet-monitor/src/index.ts",
         "polyfills": "apps/fleet-monitor/src/polyfills.ts",
         "tsConfig": "apps/fleet-monitor/tsconfig.app.json",
         "assets": [
@@ -21,7 +21,7 @@
         ],
         "styles": ["apps/fleet-monitor/src/styles.scss"],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "webpackConfig": "apps/fleet-monitor/webpack.config.js"
       },
       "configurations": {
         "production": {
@@ -31,11 +31,11 @@
               "with": "apps/fleet-monitor/src/environments/environment.prod.ts"
             }
           ],
-          "optimization": true,
+          "optimization": false,
           "outputHashing": "all",
-          "sourceMap": false,
+          "sourceMap": true,
           "namedChunks": false,
-          "extractLicenses": true,
+          "extractLicenses": false,
           "vendorChunk": false
         }
       }

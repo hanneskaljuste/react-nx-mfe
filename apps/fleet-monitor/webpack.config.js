@@ -4,12 +4,12 @@ const reactWebpackConfig = require('@nrwl/react/plugins/webpack');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = (config, context) => {
-  const c = {
+  return {
     ...config,
     mode: 'production',
     output: {
       ...config.output,
-      publicPath: 'http://localhost:4202/',
+      publicPath: 'http://localhost:4201/',
     },
     optimization: {
       ...config.optimization,
@@ -18,10 +18,11 @@ module.exports = (config, context) => {
     plugins: [
       ...config.plugins,
       new ModuleFederationPlugin({
-        name: 'places',
+        name: 'fleet_monitor',
         filename: 'remoteEntry.js',
         exposes: {
-          './PlacesRemoteEntry': './src/app/components/PlacesRemoteEntry',
+          './FleetMonitorRemoteEntry':
+            './src/app/components/FleetMonitorRemoteEntry',
         },
         shared: {
           ...deps,
@@ -39,5 +40,4 @@ module.exports = (config, context) => {
       }),
     ],
   };
-  return c;
 };

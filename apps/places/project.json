@@ -28,12 +28,12 @@
               "with": "apps/places/src/environments/environment.prod.ts"
             }
           ],
-          "optimization": true,
+          "optimization": false,
           "outputHashing": "all",
           "sourceMap": true,
-          "namedChunks": true,
-          "extractLicenses": true,
-          "vendorChunk": true
+          "namedChunks": false,
+          "extractLicenses": false,
+          "vendorChunk": false
         }
       }
     },

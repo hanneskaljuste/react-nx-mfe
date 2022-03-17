@@ -5,4 +5,8 @@
  * .container {
  * }
 */
-@import './global.scss';
+.container {
+  h3 {
+    color: red;
+  }
+}

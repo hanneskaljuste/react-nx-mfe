@@ -3,7 +3,7 @@ import styles from './App.module.scss';
 import NxWelcome from './nx-welcome';
 
 import { Route, Link } from 'react-router-dom';
-import { CommonUi } from '@sixfold/common-ui';
+import { MainNavigation } from '@sixfold/common-ui';
 import React, { Suspense } from 'react';
 
 const PlacesRemoteEntry = React.lazy(() => import('places/PlacesRemoteEntry'));
@@ -14,8 +14,7 @@ const FleetMonitorRemoteEntry = React.lazy(
 export function App() {
   return (
     <>
-      Shell App1
-      <CommonUi />
+      <MainNavigation />
       <div role="navigation">
         <ul>
           <li>

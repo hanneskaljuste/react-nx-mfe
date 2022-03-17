@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'global';
+body {
+  color: $primary-color;
+}
+
+h3 {
+  color: $secondary-color;
+}

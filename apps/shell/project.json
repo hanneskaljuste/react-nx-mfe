@@ -17,6 +17,9 @@
         "tsConfig": "apps/shell/tsconfig.app.json",
         "assets": ["apps/shell/src/favicon.ico", "apps/shell/src/assets"],
         "styles": ["apps/shell/src/styles.scss"],
+        "stylePreprocessorOptions": {
+          "includePaths": ["libs/common-ui/src/lib"]
+        },
         "scripts": [],
         "webpackConfig": "apps/shell/webpack.config.js"
       },

@@ -6,6 +6,7 @@
     "fleet-monitor-e2e": "apps/fleet-monitor-e2e",
     "places": "apps/places",
     "places-e2e": "apps/places-e2e",
+    "places-server": "apps/places-server",
     "shell": "apps/shell",
     "shell-e2e": "apps/shell-e2e",
     "tutorial": "apps/tutorial",

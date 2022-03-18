@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@sixfold/common-ui": ["libs/common-ui/src/index.ts"]
+      "@sixfold/common-ui": ["libs/common-ui/src/index.ts"],
+      "@sixfold/types": ["libs/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

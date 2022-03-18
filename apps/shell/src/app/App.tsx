@@ -5,6 +5,7 @@ import NxWelcome from './nx-welcome';
 import { Route, Link } from 'react-router-dom';
 import { MainNavigation, MainNavigationItem } from '@sixfold/common-ui';
 import React, { Suspense } from 'react';
+import { Company, Weather } from '@sixfold/types';
 
 const PlacesRemoteEntry = React.lazy(() => import('places/PlacesRemoteEntry'));
 const FleetMonitorRemoteEntry = React.lazy(
@@ -16,6 +17,17 @@ const WeatherRemoteEntry = React.lazy(
 );
 
 export function App() {
+  const c: Company = {
+    name: 'Test',
+    description: 'Desc',
+  };
+  const w: Weather = {
+    temperature: 3,
+    location: 'Tallinn',
+    lat: 123,
+    lon: 321,
+  };
+  console.log(c, w);
   return (
     <>
       <MainNavigation>

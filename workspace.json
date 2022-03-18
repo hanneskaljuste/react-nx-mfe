@@ -11,6 +11,7 @@
     "shell-e2e": "apps/shell-e2e",
     "tutorial": "apps/tutorial",
     "tutorial-e2e": "apps/tutorial-e2e",
+    "types": "libs/types",
     "weather": "apps/weather",
     "weather-e2e": "apps/weather-e2e"
   }

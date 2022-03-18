@@ -1,10 +1,16 @@
 import { CommonUi } from '@sixfold/common-ui';
+import { Company } from '@sixfold/types';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 import PlacesList from './places-list/PlacesList';
 interface Props {
   title: string;
 }
 function PlacesRemoteEntry(props: Props) {
+  const c: Company = {
+    name: 'Test',
+    description: 'Desc',
+  };
+  console.log(c);
   return (
     <BrowserRouter>
       <div>

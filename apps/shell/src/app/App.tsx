@@ -3,7 +3,7 @@ import styles from './App.module.scss';
 import NxWelcome from './nx-welcome';
 
 import { Route, Link } from 'react-router-dom';
-import { MainNavigation } from '@sixfold/common-ui';
+import { MainNavigation, MainNavigationItem } from '@sixfold/common-ui';
 import React, { Suspense } from 'react';
 
 const PlacesRemoteEntry = React.lazy(() => import('places/PlacesRemoteEntry'));
@@ -14,20 +14,15 @@ const FleetMonitorRemoteEntry = React.lazy(
 export function App() {
   return (
     <>
-      <MainNavigation />
-      <div role="navigation">
-        <ul>
-          <li>
-            <Link to="/places">Places</Link>
-          </li>
-          <li>
-            <Link to="/fleet-monitor">Fleet monitor</Link>
-          </li>
-        </ul>
-      </div>
+      <MainNavigation>
+        <MainNavigationItem href="/places" link="Places"></MainNavigationItem>
+        <MainNavigationItem
+          href="/fleet-monitor"
+          link="Fleet monitor"
+        ></MainNavigationItem>
+      </MainNavigation>
       <Route
         path="/places"
-        exact
         render={() => (
           <div>
             <Suspense fallback={<div>Loading...</div>}>

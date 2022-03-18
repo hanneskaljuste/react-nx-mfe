@@ -10,15 +10,13 @@ function PlacesRemoteEntry(props: Props) {
       <div>
         <h3>Places Remote Entry: {props.title}</h3>
         <PlacesList></PlacesList>
-        <div role="navigation">
-          <ul>
-            <li>
-              <Link to="/places/home">Places home</Link>
-            </li>
-            <li>
-              <Link to="/places/info">Places info</Link>
-            </li>
-          </ul>
+        <div className="row">
+          <div className="col s3">
+            <Link to="/places/home">Places home</Link>
+          </div>
+          <div className="col s3">
+            <Link to="/places/info">Places info</Link>
+          </div>
         </div>
         <Route
           path="/places/home"

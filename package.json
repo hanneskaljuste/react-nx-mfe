@@ -6,8 +6,8 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "start:all": "nx run-many --parallel --target=serve --projects=shell,places,fleet-monitor",
-    "build:all": "nx build shell && nx build places && nx build fleet-monitor"
+    "start:all": "nx run-many --parallel=4 --target=serve --projects=shell,places,weather,fleet-monitor",
+    "build:all": "nx build shell && nx build places && nx build fleet-monitor && nx build weather"
   },
   "private": true,
   "dependencies": {

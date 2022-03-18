@@ -10,6 +10,8 @@
     "shell": "apps/shell",
     "shell-e2e": "apps/shell-e2e",
     "tutorial": "apps/tutorial",
-    "tutorial-e2e": "apps/tutorial-e2e"
+    "tutorial-e2e": "apps/tutorial-e2e",
+    "weather": "apps/weather",
+    "weather-e2e": "apps/weather-e2e"
   }
 }

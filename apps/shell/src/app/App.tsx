@@ -11,6 +11,10 @@ const FleetMonitorRemoteEntry = React.lazy(
   () => import('fleet_monitor/FleetMonitorRemoteEntry')
 );
 
+const WeatherRemoteEntry = React.lazy(
+  () => import('weather/WeatherRemoteEntry')
+);
+
 export function App() {
   return (
     <>
@@ -21,27 +25,38 @@ export function App() {
           link="Fleet monitor"
         ></MainNavigationItem>
       </MainNavigation>
-      <Route
-        path="/places"
-        render={() => (
-          <div>
-            <Suspense fallback={<div>Loading...</div>}>
-              <PlacesRemoteEntry title="test"></PlacesRemoteEntry>
-            </Suspense>
-          </div>
-        )}
-      />
-      <Route
-        path="/fleet-monitor"
-        exact
-        render={() => (
-          <div>
-            <Suspense fallback={<div>Loading...</div>}>
-              <FleetMonitorRemoteEntry></FleetMonitorRemoteEntry>
-            </Suspense>
-          </div>
-        )}
-      />
+
+      <div className="row">
+        <div className="col s9">
+          <Route
+            path="/places"
+            render={() => (
+              <div>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <PlacesRemoteEntry title="Places from shell"></PlacesRemoteEntry>
+                </Suspense>
+              </div>
+            )}
+          />
+          <Route
+            path="/fleet-monitor"
+            exact
+            render={() => (
+              <div>
+                <Suspense fallback={<div>Loading...</div>}>
+                  <FleetMonitorRemoteEntry></FleetMonitorRemoteEntry>
+                </Suspense>
+              </div>
+            )}
+          />
+        </div>
+        <div className="col s3">
+          <Suspense fallback={<div>Loading...</div>}>
+            <WeatherRemoteEntry></WeatherRemoteEntry>
+          </Suspense>
+        </div>
+      </div>
+
       {/* END: routes */}
     </>
   );

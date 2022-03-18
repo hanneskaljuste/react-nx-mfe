@@ -6,7 +6,7 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 module.exports = (config, context) => {
   const c = {
     ...config,
-    mode: 'production',
+    mode: 'development',
     output: {
       ...config.output,
       publicPath: 'http://localhost:4202/',

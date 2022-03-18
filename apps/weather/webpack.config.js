@@ -4,12 +4,12 @@ const reactWebpackConfig = require('@nrwl/react/plugins/webpack');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 module.exports = (config, context) => {
-  return {
+  const c = {
     ...config,
     mode: 'development',
     output: {
       ...config.output,
-      publicPath: 'http://localhost:4201/',
+      publicPath: 'http://localhost:4203/',
     },
     optimization: {
       ...config.optimization,
@@ -18,11 +18,10 @@ module.exports = (config, context) => {
     plugins: [
       ...config.plugins,
       new ModuleFederationPlugin({
-        name: 'fleet_monitor',
+        name: 'weather',
         filename: 'remoteEntry.js',
         exposes: {
-          './FleetMonitorRemoteEntry':
-            './src/app/components/FleetMonitorRemoteEntry',
+          './WeatherRemoteEntry': './src/app/components/WeatherRemoteEntry',
         },
         shared: {
           ...deps,
@@ -40,4 +39,5 @@ module.exports = (config, context) => {
       }),
     ],
   };
+  return c;
 };

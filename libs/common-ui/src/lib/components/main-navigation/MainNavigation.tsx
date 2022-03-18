@@ -13,7 +13,6 @@ export const MainNavigation: React.FunctionComponent = ({ children }) => {
           <svg
             version="1.0"
             xmlns="http://www.w3.org/2000/svg"
-            width="auto"
             height="90%"
             viewBox="0 0 650.000000 194.000000"
             preserveAspectRatio="xMidYMid meet"

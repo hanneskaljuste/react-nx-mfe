@@ -8,8 +8,8 @@ function PlacesRemoteEntry(props: Props) {
   return (
     <BrowserRouter>
       <div>
-        <h3>Places Remote Entry: {props.title}</h3>
-        <PlacesList></PlacesList>
+        <h3>{props.title}</h3>
+        {/* <PlacesList></PlacesList> */}
         <div className="row">
           <div className="col s3">
             <Link to="/places/home">Places home</Link>

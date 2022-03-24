@@ -22,7 +22,7 @@ function WeatherRemoteEntry() {
           <div className="card">
             <div className="card-image">
               <img src="https://icons-for-free.com/iconfiles/png/512/cloudy+day+sun+sunny+weather+icon-1320196636792315138.png" />
-              <span className="card-title">Card Title</span>
+              {/* <span className="card-title">Card Title</span> */}
             </div>
             <div className="card-content">
               <h1 style={{ textAlign: 'center' }}>{newTemp}&deg;C</h1>

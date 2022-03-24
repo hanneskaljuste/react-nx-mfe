@@ -1,5 +1,9 @@
 # NX monorepo + Microfrontends
 
+## Install
+
+Run `npm install`
+
 ## Development server
 
 Run `npm run start:all` to start applications.

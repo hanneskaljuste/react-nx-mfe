@@ -17,8 +17,9 @@ function WeatherRemoteEntry() {
   // const temp = setInterval(shuffle, 5000);
   return (
     <BrowserRouter>
+      <h3>Weather</h3>
       <div className="row">
-        <div className="col s12 m7">
+        <div className="col s12 m12">
           <div className="card">
             <div className="card-image">
               <img src="https://icons-for-free.com/iconfiles/png/512/cloudy+day+sun+sunny+weather+icon-1320196636792315138.png" />

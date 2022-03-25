@@ -4,6 +4,8 @@
     "common-ui": "libs/common-ui",
     "fleet-monitor": "apps/fleet-monitor",
     "fleet-monitor-e2e": "apps/fleet-monitor-e2e",
+    "materialize": "apps/materialize",
+    "materialize-e2e": "apps/materialize-e2e",
     "places": "apps/places",
     "places-e2e": "apps/places-e2e",
     "places-server": "apps/places-server",

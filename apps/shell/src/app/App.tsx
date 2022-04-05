@@ -45,7 +45,7 @@ export function App() {
             render={() => (
               <div>
                 <Suspense fallback={<div>Loading...</div>}>
-                  <PlacesRemoteEntry title="Places from shell"></PlacesRemoteEntry>
+                  <PlacesRemoteEntry title="Places title from shell"></PlacesRemoteEntry>
                 </Suspense>
               </div>
             )}
